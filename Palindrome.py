@@ -5,8 +5,8 @@ class Solution:
 
 
 def main():
-    pal: object = Solution()
-    i: int = -100
+    pal: Solution = Solution()
+    i: int = 6996
     print(pal.isPalindrome(i))
 
 if __name__ == "__main__":
