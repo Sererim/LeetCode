@@ -1,6 +1,5 @@
 # Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k]. If no such indices exists, return false.
 
- 
 
 # Example 1:
 
@@ -17,32 +16,33 @@
 # Input: nums = [2,1,5,0,4,6]
 # Output: true
 # Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 < nums[5] == 6.
- 
+
 
 # Constraints:
 
 # 1 <= nums.length <= 5 * 105 
 # -231 <= nums[i] <= 231 - 1
- 
+
 
 # Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
+from typing import List
 
-def increasingTriplet(self, nums: List[int]) -> bool:
+
+def increasing_triplet(self, nums: List[int]) -> bool:
     answer: bool = False
     length: int = len(nums)
-    min = float('inf')
-    max = float('inf')
+    min_elem = float('inf')
+    elem_min = float('inf')
     if length >= 3:
         for i in nums:
-            if i <= min:
-                min = i
-            elif i <= max:
-                max = i
+            if i <= min_elem:
+                min_elem = i
+            elif i <= elem_min:
+                elem_min = i
             else:
                 answer = True
     return answer
 
 
-
 if __name__ == "__main__":
-    print(increasingTriplet([20,100,10,12,5,13]))
+    print(increasing_triplet([20, 100, 10, 12, 5, 13]))
