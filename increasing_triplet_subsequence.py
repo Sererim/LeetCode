@@ -28,7 +28,7 @@
 from typing import List
 
 
-def increasing_triplet(self, nums: List[int]) -> bool:
+def increasing_triplet(nums: List[int]) -> bool:
     answer: bool = False
     length: int = len(nums)
     min_elem = float('inf')
