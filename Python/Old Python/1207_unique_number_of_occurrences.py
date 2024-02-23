@@ -22,7 +22,7 @@ def unique_occurrences(arr: List[int]) -> bool:
     return True if len(set(d.values())) == len(d.values()) else False
 
 
-if __name__ == '__main__':
+ if __name__ == '__main__':
     assert unique_occurrences([1, 2, 2, 1, 1, 3])
     assert not unique_occurrences([1, 2])
     assert unique_occurrences([-3, 0, 1, -3, 1, 1, 1, -3, 10, 0])
